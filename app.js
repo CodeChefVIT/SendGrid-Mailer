@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 require("dotenv").config();
+const chalk = require('chalk')
 const sgMail = require('@sendgrid/mail');
 
 //Start App
@@ -8,7 +9,7 @@ const app = express();
 
 //SendGrid settings
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-const mailingList = ['<Enter Email Addresses>']
+const mailingList = ['jugalbhatt3@gmail.com']
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -25,9 +26,9 @@ app.get('/sendMails',async(req,res,next)=>{
     html: '<strong>and easy to do anywhere, even with Node.js</strong>',
     };
     sgMail.send(msg).then((result)=>{
-      console.log(mail)
+      console.log(chalk.green("Sent to "),mail)
     }).catch((err)=>{
-      console.log(mail, err.toString())
+      console.log(chalk.red("Couldn't send to "),mail,chalk.red(' and Error: '), err.toString())
     })
   }
 })

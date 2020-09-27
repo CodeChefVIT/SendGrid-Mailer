@@ -8,7 +8,7 @@ const app = express();
 
 //SendGrid settings
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-const mailingList = ['jugalbhatt3@gmail.com']
+const mailingList = ['<Enter Email Addresses>']
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

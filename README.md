@@ -3,7 +3,7 @@
 
 # SendGrid-Mailer Node.Js
 
-> Easily send emails just by adding an array of emails
+> Send bulk emails by just adding an array of contacts within seconds using the SendGrid API.
 
 
 ## Instructions to run
@@ -11,10 +11,10 @@
 $ git clone https://github.com/CodeChefVIT/SendGrid-Mailer
 $ cd SendGrid-Mailer
 $ npm i
-$ Ask for env credentials
-$ Add an array of emails to the mailingList
+Enter credentials in env
+Add an array of emails to the mailingList
 $ npm run dev
-$ Open postman and use localhost:3000/sendMails
+Open postman and use localhost:3000/sendMails
 ```
 
 ## Contributors
